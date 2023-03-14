@@ -1,20 +1,20 @@
 const { DataTypes } = require('sequelize');
-const db =require('../utils/db');
+const db = require('../utils/db');
 
 
 const CustomerInfo = db.define('customerInfo', {
-    id:{
+    id: {
         type: DataTypes.INTEGER,
-                primaryKey: true,
-                autoIncrement: true
-            },
+        primaryKey: true,
+        autoIncrement: true
+    },
     lname: DataTypes.STRING,
     fname: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     address: DataTypes.STRING,
+}, {
     initialAutoIncrement: 8000,
     timestamps: false
-
 });
-module.exports=CustomerInfo;
+module.exports = CustomerInfo;
